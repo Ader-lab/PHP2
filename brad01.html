@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="a">
+    <select id="op">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+    </select>
+    <input type="text" id="b">
+    <input type="button" value="=" id="c">
+    <span id="d">x</span>
+
+
+    <script>
+
+        c.addEventListener("click", function(){
+            
+            let aV = document.getElementById("a").value;
+            let bV = document.getElementById("b").value;
+            let c = document.getElementById("c");
+            let d = document.getElementById("d");
+            let op = document.getElementById("op");
+            let result;
+            console.log(op.selectedIndex);
+            aV = parseInt(aV);
+            bV = parseInt(bV);
+            
+            if(op.selectedIndex === 0) result = aV + bV;
+            else if(op.selectedIndex === 1) result = aV - bV;
+            else if(op.selectedIndex === 2) result = aV * bV;
+            else if(op.selectedIndex === 3) {
+                let r1 = parseInt(aV / bV);
+                let r2 = parseInt(aV % bV);
+                result = `${r1}......${r2}`;
+            }
+        
+            d.innerHTML = result;
+
+        })
+
+        
+    
+    </script>    
+</body>
+</html>
