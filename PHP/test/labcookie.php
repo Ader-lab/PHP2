@@ -1,7 +1,9 @@
 <?php
 
 if(isset($_POST["writeCookie"])) {
-    echo "33333";
+    $data = $_POST["data"];
+    //第一個參數是自訂義名稱 第二是資料 //第三是COOKIE的存活時間,沒有寫就是關掉瀏覽器之前
+    setcookie("myCookie",$data,time()+60*60*24);  //time()是拿到現在的時間戳記
 }
 if(isset($_POST["readCookie"])) {
     echo "55555";
