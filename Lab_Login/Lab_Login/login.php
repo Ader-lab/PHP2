@@ -1,7 +1,10 @@
 <?php
 
+
+
 if(isset($_POST['btnOK'])) {
-  echo '123';
+  setcookie("userName",$_POST['txtUserName']);
+  header("Location: index.php");
 }
 
 
