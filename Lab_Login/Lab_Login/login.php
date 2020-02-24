@@ -1,10 +1,14 @@
 <?php
 
-
-
 if(isset($_POST['btnOK'])) {
   setcookie("userName",$_POST['txtUserName']);
-  header("Location: index.php");
+  $c = $_COOKIE["backTo"];
+  if($c){
+    header("Location: $c");
+  }else{
+    header("Location: index.php");
+  }
+
 }
 
 
