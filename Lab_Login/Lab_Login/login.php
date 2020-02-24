@@ -10,7 +10,7 @@ if(isset($_POST['btnOK'])) {
   $c = $_COOKIE["backTo"];
   if($c){
     header("Location: $c");
-    // $_COOKIE["backTo"] = "";
+    setcookie("backTo", "secret.php",time()-3600*24);
   }else{
     header("Location: index.php");
   }

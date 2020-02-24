@@ -24,6 +24,7 @@ if(isset($_COOKIE["userName"])) {
       <a href="login.php">登入</a> 
     <?php } else { ?>
       <a href="login.php?signout=1">登出</a> 
+      <!-- signout=1 等於1只是要有資料沒特別意思任何都可以，但不能是0 -->
     <?php } ?>
     | <a href="secret.php">會員專用頁</a></td>
   </tr>
