@@ -12,6 +12,8 @@ mysqli_select_db($link, "class");
 // 2. 執行 SQL 敘述
 $commandText = "select * from students";
 $result = mysqli_query($link, $commandText);
+// $row = mysqli_fetch_assoc($result);
+// echo json_encode($row);  //把資料轉成JSON
 
 // 3. 處理查詢結果
 while ($row = mysqli_fetch_assoc($result))
