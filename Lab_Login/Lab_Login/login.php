@@ -1,10 +1,16 @@
 <?php
+if(isset($_GET['signout'])){
+  setcookie("userName",$_POST['txtUserName'],time()-3600*24);
+  header("Location: index.php");
+  exit();
+}
 
 if(isset($_POST['btnOK'])) {
   setcookie("userName",$_POST['txtUserName']);
   $c = $_COOKIE["backTo"];
   if($c){
     header("Location: $c");
+    // $_COOKIE["backTo"] = "";
   }else{
     header("Location: index.php");
   }
