@@ -26,7 +26,7 @@
 		}
 		
 		function btnGetFromMonster_click() {
-			$.get("https://lab2-appdev1226-1.c9users.io/0423/Demo_SameOriginPolicy/getTime.php", 
+			$.get("http://127.0.0.1/php2/Demo/Demo_SameOriginPolicy/getTime.php", 
 					doDataback);
 		}
 		

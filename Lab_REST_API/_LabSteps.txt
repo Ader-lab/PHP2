@@ -339,3 +339,9 @@ http://localhost/190720/Lab_REST_API/api/products
 
 
 3.4 在瀏覽器測試 testForm.html 的資料增刪功能
+
+
+
+Content-Type: application/x-www-form-urlencoded
+
+productName=i20&price=20202&quantity=20&postButton=POST
