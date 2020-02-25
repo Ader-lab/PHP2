@@ -47,11 +47,11 @@ function getProducts() {
     global $dbLink;
     $result = mysqli_query($dbLink, 
       "select * from products");
-    echo "[";
+    $dataList = null;
     while ($row = mysqli_fetch_assoc($result)) {
-        echo json_encode($row);
+        $dataList[] = $row;
     }
-    echo "]";
+    echo json_encode($dataList);
 }
 
 
