@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Lab</title>
-    <script src="jquery-1.9.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-    <form method="post" action="api/products">
+    <form method="post" action="http://localhost/php2/Lab_REST_API/api/products/">
         <h1>新增資料</h1>
         Product name: <input type="text" name="productName"><br>
         Price: <input type="text" name="price"><br>
@@ -28,7 +28,7 @@
             };
             $.ajax({
                 type: "put",
-                url: "/api/products/1",
+                url: "http://localhost/php2/Lab_REST_API/api/products/1",
                 data: productData
             }).then(function (e) {
                 $("#putButton").val(e);
@@ -38,7 +38,7 @@
         $("#deleteButton").click(function () {
             $.ajax({
                 type: "delete",
-                url: "/api/products/3"
+                url: "http://localhost/php2/Lab_REST_API/api/products/3"
             }).then(function (e) {
                 $("#deleteButton").val(e);
             })

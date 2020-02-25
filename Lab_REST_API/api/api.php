@@ -80,7 +80,7 @@ function updateProduct($id) {
 
     global $dbLink;
     
-    parse_str(file_get_contents('php://input'), $putData);
+    parse_str(file_get_contents('php://input'), $putData); //接資料
     //echo json_encode($putData);
     //return;
     $productName = $putData["productName"];
